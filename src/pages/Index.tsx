@@ -11,6 +11,12 @@ import manufacturingFacility from "@/assets/manufacturing-facility.jpg";
 import globalNetwork from "@/assets/global-network.jpg";
 import qualityControl from "@/assets/quality-control.jpg";
 import sustainability from "@/assets/sustainability.jpg";
+import textileWorkers from "@/assets/textile-workers.jpg";
+import productionLine from "@/assets/production-line.jpg";
+import qualityInspection from "@/assets/quality-inspection.jpg";
+import garmentWarehouse from "@/assets/garment-warehouse.jpg";
+import designStudio from "@/assets/design-studio.jpg";
+import ecoManufacturing from "@/assets/eco-manufacturing.jpg";
 
 const Index = () => {
   const clientBrands = [
@@ -120,7 +126,7 @@ const Index = () => {
                 </Link>
               </Button>
               
-              <Button asChild size="lg" variant="outline" className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-primary">
+              <Button asChild size="lg" variant="outline-white" className="text-lg px-8 py-4">
                 <Link to="/contact">
                   Get Quote
                   <Mail className="ml-2 h-5 w-5" />
@@ -355,6 +361,40 @@ const Index = () => {
               </Link>
             </Button>
           </div>
+
+          {/* Product Gallery */}
+          <div className="mt-20">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="animate-fade-in-left">
+                <h3 className="text-3xl font-bold mb-6">Our Warehouse & Inventory</h3>
+                <p className="text-lg text-foreground mb-6 leading-relaxed">
+                  Our organized warehouse facility ensures efficient inventory management and timely dispatch 
+                  of orders to clients worldwide.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                    <span>Climate-controlled storage</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                    <span>Advanced inventory management</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-primary mr-3" />
+                    <span>Quick dispatch capabilities</span>
+                  </div>
+                </div>
+              </div>
+              <div className="animate-fade-in-right">
+                <img 
+                  src={garmentWarehouse} 
+                  alt="Garment Warehouse" 
+                  className="w-full rounded-2xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -457,11 +497,103 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Manufacturing Process Section */}
+      <section className="py-24 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-20 animate-fade-in-up">
+            <Badge className="mb-4 bg-primary/10 text-primary">Manufacturing Process</Badge>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">Our Production Journey</h2>
+            <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
+              From design conception to final delivery, witness our comprehensive manufacturing process
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-left">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src={designStudio} 
+                    alt="Design Studio" 
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Design & Development</h3>
+                    <p className="text-white/90">Creative design studio with fabric samples and color coordination</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-right">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src={productionLine} 
+                    alt="Production Line" 
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Advanced Production</h3>
+                    <p className="text-white/90">Modern automated production lines with precision cutting</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-left animation-delay-200">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src={textileWorkers} 
+                    alt="Skilled Workers" 
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Skilled Workforce</h3>
+                    <p className="text-white/90">Expert textile workers operating advanced machinery</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-right animation-delay-200">
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img 
+                    src={qualityInspection} 
+                    alt="Quality Inspection" 
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Quality Inspection</h3>
+                    <p className="text-white/90">Rigorous quality control and testing procedures</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button asChild size="lg" className="animate-pulse-glow">
+              <Link to="/infrastructure">
+                Explore Our Manufacturing Process
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Sustainability Section */}
-      <section className="py-24 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-24 bg-gradient-to-br from-secondary to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
-            <Badge className="mb-4 bg-green-100 text-green-800">Sustainability</Badge>
+            <Badge className="mb-4 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">Sustainability</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Committed to Sustainable Manufacturing</h2>
             <p className="text-xl text-foreground max-w-3xl mx-auto">
               We believe in responsible manufacturing that protects our planet while delivering exceptional products.
@@ -471,8 +603,8 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-left">
               <img 
-                src={sustainability} 
-                alt="Sustainable Manufacturing" 
+                src={ecoManufacturing} 
+                alt="Eco Manufacturing" 
                 className="w-full rounded-2xl shadow-2xl"
               />
             </div>
